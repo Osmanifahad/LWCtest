@@ -1,0 +1,11 @@
+<template>
+    <input onchange={writeName} placeholder="Enter Employee Name" type="text">
+    <br>
+    <button onclick={getAssets}> Get Asset</button>
+    <br>
+<template for:each={assets} for:item="Asset">
+<div key={Asset.Id} class='nameCard1'>
+        {Asset.Name}-{Asset.AssetStatus__c}-{Asset.AssetType__c}
+    </div>
+</template>
+</template>

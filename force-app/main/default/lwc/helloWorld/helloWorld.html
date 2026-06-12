@@ -1,0 +1,39 @@
+<template>
+    <h1>Hello World</h1>
+    <input onchange={enterAge} placeholder="enter age" type="number">
+<button onclick={checkAge}> Check Eligible </button>
+
+<div class="yes" if:true={adult}>
+    You are an Adult
+</div>
+
+<div class="no" if:false={adult}>
+    You are not an Adult
+</div>
+<br>
+
+<template for:each={names} for:item='n'>
+    <div class="nameCard" key={n}>{n}</div></template>
+    <br>
+    <input onchange={enterNumber1} placeholder="enter number1" type="number">
+    <input onchange={enterNumber2} placeholder="enter number2" type="number">
+
+<button onclick={addNumbers}>Add Numbers</button>
+<br>
+
+
+<br>
+<!-- <button onclick={callAllEmployees}> Call all Employees</button> -->
+<template for:each={emps} for:item='employee'>
+    <div key={employee.Id} class='nameCard'>
+        {employee.Name}
+              </div>
+</template>
+
+<br>
+<template for:each={asst} for:item='Asset'>
+    <div key={Asset.Id} class='nameCard1'>
+        {Asset.Name}-{Asset.AssetStatus__c}-{Asset.AssetType__c}
+    </div>
+</template>
+</template>
